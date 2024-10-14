@@ -3,6 +3,23 @@ import numpy as np
 import scipy.integrate as si
 import matplotlib.pyplot as plt
 from PIL import Image
+# Initialize session state variables if they do not exist
+if 'R0' not in st.session_state:
+    st.session_state.R0 = 2.4
+if 'infectious_period' not in st.session_state:
+    st.session_state.infectious_period = 14
+if 'incubation_period' not in st.session_state:
+    st.session_state.incubation_period = 8
+if 'delta' not in st.session_state:
+    st.session_state.delta = 0.064
+if 'death_rate' not in st.session_state:
+    st.session_state.death_rate = 9  # default death rate per 1000 per year
+if 'birth_rate' not in st.session_state:
+    st.session_state.birth_rate = 42  # default birth rate per 1000 per year
+if 'v' not in st.session_state:
+    st.session_state.v = 0.0
+if 'e' not in st.session_state:
+    st.session_state.e = 0.0
 
 # Set page config
 st.set_page_config(page_title="Mpox Model Simulator", layout="wide")
