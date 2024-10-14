@@ -34,7 +34,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installation
 
 1. Clone the repository using `git clone https://github.com/donkim07/Mpox-Disease-Model.git`
-2. Install the required packages using `pip install -r requirements.txt`
+2. Install the required packages using `pip install -r requirements.txt` remember to update the versions to tha current ones.
 
 ### Usage
 
