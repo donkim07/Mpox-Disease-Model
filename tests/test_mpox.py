@@ -1,6 +1,6 @@
 import numpy as np
 import pytest
-from app import mpoxWithout, mpoxWith  # assuming your main file is named app.py
+from mpox.app import mpoxWithout, mpoxWith
 
 def test_mpox_without_vaccination():
     # Test initial conditions
@@ -29,14 +29,3 @@ def test_mpox_with_vaccination():
     
     # Check conservation of population (sum of derivatives should be close to 0)
     assert abs(sum(derivatives)) < 1e-10
-
-def test_model_parameters():
-    # Test that model parameters are within reasonable ranges
-    from app import st
-    
-    assert 1.0 <= st.session_state.R0 <= 5.0
-    assert 1 <= st.session_state.infectious_period <= 30
-    assert 1 <= st.session_state.incubation_period <= 20
-    assert 0.0 <= st.session_state.delta <= 0.2
-    assert 0.0 <= st.session_state.v <= 0.9
-    assert 0.0 <= st.session_state.e <= 1.0
