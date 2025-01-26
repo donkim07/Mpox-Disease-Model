@@ -4,29 +4,12 @@ channels:
   - defaults
 dependencies:
   - python=3.10
-  # Scientific Computing
-  - numpy>=1.21.0
-  - pandas>=1.3.0
-  - scipy>=1.7.0
-  
-  # Data Visualization
-  - matplotlib>=3.4.0
-  - seaborn>=0.11.0
-  
-  # Disease Modeling
-  - networkx>=2.6.0  # For network-based disease spread modeling
-  
-  # Testing and Development
-  - pytest>=6.0
-  - pytest-cov>=2.12
-  - flake8>=3.9
-  
-  # Optional: Add if you need these
-  # - scikit-learn>=0.24  # For machine learning components
-  # - jupyterlab>=3.0     # For notebook development
-  
-  # Pip dependencies (if any)
-  - pip
-  - pip:
-    - epyestim>=0.1  # Epidemiological parameter estimation
-    # Add any other pip-specific packages here
+  - streamlit>=1.24.0
+  - numpy>=1.24.0
+  - scipy>=1.10.0
+  - matplotlib>=3.7.0
+  - pillow>=9.5.0
+  - pytest>=7.3.1
+  - pytest-cov>=4.0.0
+  - flake8>=6.0.0
+  - pip>=23.0.0
